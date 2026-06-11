@@ -45,6 +45,8 @@ Ejecutado el **11 de junio de 2026**:
 | Next.js producción | 3 páginas estáticas generadas |
 | Verificación del artefacto | `index.html` y `404.html` aprobados |
 | Simulación de Pages | Base path `/GeneralPlus` aprobado |
+| GitHub Actions | Build y deploy aprobados |
+| Verificación pública HTTPS | HTTP 200, título y disclaimer presentes |
 
 ## Comandos
 

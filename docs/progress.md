@@ -10,6 +10,18 @@ de producción. La aplicación está orientada a demostrar interacción,
 trazabilidad, abstención y seguridad; no a simular una validación médica que
 todavía no existe.
 
+## Publicación
+
+- Repositorio: <https://github.com/ssanchezdd/GeneralPlus>
+- Aplicación: <https://ssanchezdd.github.io/GeneralPlus/>
+- Rama: `main`
+- Despliegue: GitHub Actions + GitHub Pages, HTTPS obligatorio
+- Primer commit funcional: `f3e546e`
+- Workflow validado: `Deploy GP Colombia to Pages`
+
+La URL pública respondió HTTP 200 y se verificaron en el HTML la marca
+`Criterio` y el disclaimer clínico.
+
 ## Avance por semana del plan
 
 | Semana | Estado | Entregable |
@@ -62,4 +74,3 @@ La exclusión de urgencias en la GPC de HTA se trata como dato operacional.
 - Backend alojado, autenticación, auditoría y privacidad.
 - Evaluación de seguridad con casos adversariales.
 - Revisión legal, regulatoria y de seguridad de la información.
-
