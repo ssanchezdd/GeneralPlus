@@ -11,10 +11,13 @@ recibir información identificable ni utilizarse para decidir atención.
 - Disclaimer persistente y estado de prototipo visible.
 - Alertas separadas para dolor torácico, riesgo suicida y alarma obstétrica.
 - Detección de TA elevada con síntomas y advertencia de alcance.
-- Abstención cuando el score local es insuficiente.
+- Abstención exacta cuando no existe evidencia recuperada suficiente.
 - Enlaces directos a fuente y página.
 - Certeza del sistema separada de fuerza de recomendación.
 - Detector de errores basado en reglas legibles.
+- Bloqueo de indexación mientras la revisión clínica no esté aprobada.
+- Rechazo de PDFs cifrados o con acciones, JavaScript o adjuntos embebidos.
+- Hash SHA-256, URL final y versión documental fijados antes de procesar.
 
 ## Hallazgo de alcance relevante
 
@@ -44,6 +47,10 @@ Cada documento debe registrar:
 - Fuerza de recomendación y calidad de evidencia cuando estén disponibles.
 - Revisor clínico, fecha, decisión y conflictos de interés.
 
+El manifiesto valida que una guía marcada como `approved` tenga identidad y
+fecha de revisión. Los informes técnicos también deben quedar sin banderas.
+Una descarga exitosa o un hash correcto no equivalen a aprobación clínica.
+
 ## Evaluación clínica propuesta
 
 1. Crear 50 casos frecuentes y 20 casos de bloqueo por alta criticidad.
@@ -58,4 +65,3 @@ Una señal de alta criticidad debe producir un bloque corto y visible que
 indique activación de la ruta local. El texto generado nunca debe retrasar la
 atención. Los números de emergencia y rutas específicas deben parametrizarse
 por territorio e institución, no codificarse sin validación operativa.
-

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-11T17:41:53.053880+00:00",
+  "documents": {
+    "col-gpc-dm2-2016-completa": {
+      "guideline_id": "col-gpc-dm2-2016-completa",
+      "url": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/gpc-completa-diabetes-mellitus-tipo2-poblacion-mayor-18-anos.pdf",
+      "final_url": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/gpc-completa-diabetes-mellitus-tipo2-poblacion-mayor-18-anos.pdf",
+      "filename": "col-gpc-dm2-2016-completa.pdf",
+      "sha256": "d66ef9da6b04fdf5453772ea12a188c6eb59e76737218cefda0dbc9a41372854",
+      "bytes": 9461120,
+      "content_type": "application/pdf",
+      "downloaded_at": "2026-06-11T17:41:53.053551+00:00",
+      "etag": "\"{4CF3A088-3338-4D6D-B767-7943C2B9C644},5\"",
+      "last_modified": "Sat, 18 Sep 2021 00:30:49 GMT"
+    },
+    "col-gpc-hta-2017-profesionales": {
+      "guideline_id": "col-gpc-hta-2017-profesionales",
+      "url": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/gpc-profesionales-hipertension-arterial-primaria.pdf",
+      "final_url": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/gpc-profesionales-hipertension-arterial-primaria.pdf",
+      "filename": "col-gpc-hta-2017-profesionales.pdf",
+      "sha256": "565aab3b9ae1584dd04af32c61e8aa940dfdd593521f5ec58ade853848f7b898",
+      "bytes": 909094,
+      "content_type": "application/pdf",
+      "downloaded_at": "2026-06-11T17:41:35.156797+00:00",
+      "etag": "\"{E936D3AD-DFBB-4AD2-A105-38F9B538DF7F},7\"",
+      "last_modified": "Tue, 21 Sep 2021 20:19:43 GMT"
+    }
+  }
+}

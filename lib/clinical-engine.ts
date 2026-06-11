@@ -1,4 +1,4 @@
-import administrativeErrorsData from "@/data/admin_errors.json";
+import administrativeErrorsData from "@/data/administrative_errors.json";
 import clinicalErrorsData from "@/data/clinical_errors.json";
 import diseaseTaxonomyData from "@/data/disease_taxonomy.json";
 import evidenceChunksData from "@/data/evidence_chunks.json";
@@ -371,4 +371,3 @@ export function buildClinicalNote(response: ClinicalResponse): string {
 export function getDiseaseName(id: string): string {
   return diseases.find((disease) => disease.id === id)?.name ?? id;
 }
-

@@ -17,10 +17,13 @@
 
 `backend/tests/test_backend.py` verifica:
 
-- chunking con páginas y tamaño;
-- abstención sin evidencia;
-- fuente y página en consultas con coincidencia;
-- flag de seguridad para dolor torácico.
+- contrato API, modo de recuperación y citas formateadas;
+- validación de manifiesto, dominio oficial y revisor;
+- descarga PDF y protección contra sobrescritura;
+- limpieza, chunking clínico, páginas y tamaño;
+- recuperación local con filtros;
+- bloqueo de indexación pendiente;
+- abstención exacta, fuentes y flags tiempo-dependientes.
 
 ### Build
 
@@ -40,7 +43,10 @@ Ejecutado el **11 de junio de 2026**:
 | ESLint | Aprobado, 0 errores |
 | TypeScript estricto | Aprobado |
 | Vitest | 6/6 pruebas |
-| Python unittest | 4/4 pruebas |
+| Python unittest | 17/17 pruebas |
+| Preparación de PDFs oficiales | 2/2 hashes y conteos de página aprobados |
+| Recuperación local | HTA, DM2 y abstención aprobadas |
+| pgvector | Extensión 0.8.2, esquema y distancia coseno aprobados |
 | Auditoría npm | 0 vulnerabilidades conocidas |
 | Next.js producción | 3 páginas estáticas generadas |
 | Verificación del artefacto | `index.html` y `404.html` aprobados |
@@ -56,7 +62,9 @@ npm run typecheck
 npm test
 npm run build
 npm run verify:build
-py -m unittest discover -s backend/tests
+.\.venv\Scripts\python.exe -m unittest discover -s backend/tests -v
+.\.venv\Scripts\python.exe scripts\smoke_pgvector.py
+docker compose config --quiet
 ```
 
 ## Pruebas médicas pendientes

@@ -1,0 +1,17 @@
+[
+  {"rank": 1, "condition": "hipertension_arterial", "status": "prepared"},
+  {"rank": 2, "condition": "diabetes_mellitus_tipo_2", "status": "prepared"},
+  {"rank": 3, "condition": "riesgo_cardiovascular", "status": "planned"},
+  {"rank": 4, "condition": "epoc_asma", "status": "planned"},
+  {"rank": 5, "condition": "infeccion_respiratoria_aguda", "status": "planned"},
+  {"rank": 6, "condition": "dengue", "status": "planned"},
+  {"rank": 7, "condition": "infeccion_urinaria", "status": "planned"},
+  {"rank": 8, "condition": "embarazo_control_prenatal", "status": "planned"},
+  {"rank": 9, "condition": "depresion_ansiedad_suicidio", "status": "planned"},
+  {"rank": 10, "condition": "dolor_toracico_sindrome_coronario", "status": "planned"},
+  {"rank": 11, "condition": "cefalea", "status": "planned"},
+  {"rank": 12, "condition": "dolor_abdominal", "status": "planned"},
+  {"rank": 13, "condition": "enfermedad_renal_cronica", "status": "planned"},
+  {"rank": 14, "condition": "antibioticos_infecciones_frecuentes", "status": "planned"},
+  {"rank": 15, "condition": "tamizacion_cancer_cuello_uterino_mama", "status": "planned"}
+]

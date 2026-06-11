@@ -5,10 +5,11 @@
 El workflow `.github/workflows/pages.yml`:
 
 1. instala dependencias con `npm ci`;
-2. ejecuta lint, tipos y pruebas;
-3. genera el export estático;
-4. valida el artefacto;
-5. publica `out/` con las acciones oficiales de Pages.
+2. instala las dependencias Python del backend;
+3. ejecuta lint, tipos, pruebas web y pruebas backend;
+4. genera el export estático;
+5. valida el artefacto;
+6. publica `out/` con las acciones oficiales de Pages.
 
 Permisos requeridos:
 
@@ -40,4 +41,3 @@ GitHub Pages no ejecuta FastAPI ni PostgreSQL. En producción:
 Pages conserva deployments en GitHub Actions. Un rollback debe hacerse
 revirtiendo a un commit validado y ejecutando nuevamente el workflow, de modo
 que código, corpus y documentación queden versionados juntos.
-

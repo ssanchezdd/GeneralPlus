@@ -5,12 +5,9 @@ from dataclasses import asdict
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from backend.rag.service import (
-    EvidenceRecord,
-    InMemoryRetriever,
-    RagService,
-    RetrievalFilters,
-)
+from backend.app.service_factory import build_rag_service
+from backend.rag.citations import format_citation
+from backend.rag.service import RetrievalFilters
 
 
 class QueryRequest(BaseModel):
@@ -27,6 +24,10 @@ class SourceResponse(BaseModel):
     page: int | None
     score: float
     scope: str
+    page_end: int | None = None
+    publisher: str | None = None
+    year: int | None = None
+    guideline_id: str | None = None
 
 
 class QueryResponse(BaseModel):
@@ -35,6 +36,7 @@ class QueryResponse(BaseModel):
     confidence: str
     abstained: bool
     safety_flags: list[str]
+    based_on: list[str]
 
 
 app = FastAPI(
@@ -43,34 +45,16 @@ app = FastAPI(
     description="Production contract for the Colombian clinical-support RAG.",
 )
 
-# Development-only records prove the API contract. Production replaces this
-# retriever with the pgvector adapter documented in docs/rag_pipeline.md.
-retriever = InMemoryRetriever(
-    records=[
-        EvidenceRecord(
-            id="hta-scope",
-            disease_id="hypertension",
-            source_type="GPC",
-            title="Alcance GPC hipertensión arterial primaria",
-            text=(
-                "La guía cubre prevención, diagnóstico, tratamiento y seguimiento "
-                "de HTA primaria y excluye urgencia hipertensiva y embarazo."
-            ),
-            source_url=(
-                "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/"
-                "RIDE/DE/CA/gpc-profesionales-hipertension-arterial-primaria.pdf"
-            ),
-            page=11,
-            scope="HTA primaria en adultos; no cubre urgencias ni embarazo.",
-        )
-    ]
-)
-service = RagService(retriever=retriever)
+service, retrieval_mode = build_rag_service()
 
 
 @app.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "service": "criterio-rag-api"}
+    return {
+        "status": "ok",
+        "service": "criterio-rag-api",
+        "retrieval_mode": retrieval_mode,
+    }
 
 
 @app.post("/v1/query", response_model=QueryResponse)
@@ -89,6 +73,7 @@ def query(request: QueryRequest) -> QueryResponse:
         confidence=result.confidence,
         abstained=result.abstained,
         safety_flags=result.safety_flags,
+        based_on=[format_citation(source) for source in result.sources],
     )
 
 
@@ -101,4 +86,3 @@ def upload_document() -> None:
             "object storage, antivirus scan, and pgvector adapter before enabling it."
         ),
     )
-

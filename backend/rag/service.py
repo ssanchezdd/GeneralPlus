@@ -18,6 +18,10 @@ class EvidenceRecord:
     source_url: str
     page: int | None
     scope: str
+    page_end: int | None = None
+    publisher: str | None = None
+    year: int | None = None
+    guideline_id: str | None = None
 
 
 @dataclass(frozen=True)
@@ -34,6 +38,10 @@ class ScoredSource:
     page: int | None
     score: float
     scope: str
+    page_end: int | None = None
+    publisher: str | None = None
+    year: int | None = None
+    guideline_id: str | None = None
 
 
 @dataclass(frozen=True)
@@ -106,8 +114,8 @@ class RagService:
         if not relevant:
             return RagResult(
                 summary=(
-                    "No hay evidencia recuperada suficiente para responder. "
-                    "Consulte la fuente oficial o el protocolo institucional."
+                    "No encontré una fuente suficiente en las guías cargadas. "
+                    "No puedo responder con seguridad."
                 ),
                 sources=[],
                 confidence="baja",
@@ -123,6 +131,10 @@ class RagService:
                 page=record.page,
                 score=round(score, 4),
                 scope=record.scope,
+                page_end=record.page_end,
+                publisher=record.publisher,
+                year=record.year,
+                guideline_id=record.guideline_id,
             )
             for record, score in relevant
         ]
@@ -134,4 +146,3 @@ class RagService:
             abstained=False,
             safety_flags=safety_flags,
         )
-

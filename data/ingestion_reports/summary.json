@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-06-11",
+  "indexing_status": "blocked_pending_clinical_review",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_dimensions": 1536,
+  "documents": [
+    {
+      "guideline_id": "col-gpc-hta-2017-profesionales",
+      "sha256": "565aab3b9ae1584dd04af32c61e8aa940dfdd593521f5ec58ade853848f7b898",
+      "bytes": 909094,
+      "pages": 32,
+      "text_coverage": 1.0,
+      "characters": 65427,
+      "chunks": 12,
+      "retrieval_eligible_chunks": 9,
+      "token_estimate_min": 702,
+      "token_estimate_max": 874,
+      "security_flags": [],
+      "review_flags": [],
+      "clinical_review_status": "pending"
+    },
+    {
+      "guideline_id": "col-gpc-dm2-2016-completa",
+      "sha256": "d66ef9da6b04fdf5453772ea12a188c6eb59e76737218cefda0dbc9a41372854",
+      "bytes": 9461120,
+      "pages": 606,
+      "text_coverage": 0.9967,
+      "characters": 1622060,
+      "chunks": 248,
+      "retrieval_eligible_chunks": 148,
+      "token_estimate_min": 545,
+      "token_estimate_max": 1196,
+      "security_flags": [],
+      "review_flags": [
+        "empty_pages:1",
+        "extraction_warnings:28",
+        "undersized_retrieval_chunks:2"
+      ],
+      "clinical_review_status": "pending"
+    }
+  ],
+  "pgvector_smoke": {
+    "extension_version": "0.8.2",
+    "schema_tables": [
+      "guideline_documents",
+      "guideline_chunks"
+    ],
+    "cosine_nearest_neighbor": "passed"
+  },
+  "retrieval_smoke": {
+    "hta_initial_primary_level": "passed",
+    "hta_urgent_scope": "passed",
+    "dm2_initial_treatment": "passed",
+    "unsupported_query_abstention": "passed"
+  }
+}
