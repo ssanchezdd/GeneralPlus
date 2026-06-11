@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #10231f;
+  --muted: #63716c;
+  --paper: #f3f1ea;
+  --surface: #fbfaf6;
+  --line: #d9ded8;
+  --green: #2b6b5f;
+  --mint: #dceae4;
+  --lime: #d9ed7f;
+  --warning: #bc4d2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 88% 4%, rgba(217, 237, 127, 0.22), transparent 24rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), sans-serif;
+  min-height: 100vh;
+}
+
+button,
+textarea,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  min-height: calc(100vh - 4.5rem);
+}
+
+.clinical-shadow {
+  box-shadow:
+    0 1px 0 rgba(16, 35, 31, 0.04),
+    0 18px 45px rgba(16, 35, 31, 0.06);
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(16, 35, 31, 0.13) 0.7px, transparent 0.7px);
+  background-size: 12px 12px;
+}
+
+.thin-scrollbar {
+  scrollbar-color: #9aacA5 transparent;
+  scrollbar-width: thin;
+}
+
+.fade-up {
+  animation: fade-up 420ms ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up {
+    animation: none;
+  }
+}
+

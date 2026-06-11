@@ -1,0 +1,274 @@
+Aquí tienes un plan práctico para construirlo en **Cursor**.
+
+## Objetivo del software
+
+Crear un asistente clínico para médico general en Colombia que responda con base en:
+
+1. **Guías de Práctica Clínica colombianas**, idealmente del repositorio oficial de GPC/SISPRO-MinSalud. ([Sispro][1])
+2. **RIAS / Rutas Integrales de Atención en Salud**, que definen la integralidad de la atención en Colombia. ([MinSalud][2])
+3. Errores frecuentes de medicina general: diagnóstico, formulación, remisión, incapacidad, historia clínica, órdenes, autorizaciones, seguimiento y red flags.
+4. Priorización por enfermedades frecuentes/incidentes en consulta general.
+
+## MVP recomendado
+
+Nombre provisional: **GP Colombia RAG Assistant**
+
+Debe permitir al médico escribir:
+
+> “Paciente mujer 58 años con cefalea, TA 170/100, mareo. ¿Qué debo hacer según guías colombianas?”
+
+Y responder:
+
+* Posibles diagnósticos diferenciales.
+* Conducta inicial.
+* Red flags.
+* Cuándo remitir a urgencias.
+* Qué no olvidar en historia clínica.
+* Errores administrativos frecuentes.
+* Fuente exacta usada.
+* Nivel de confianza.
+* Disclaimer: apoyo clínico, no reemplaza juicio médico.
+
+## Stack simple para Cursor
+
+Usa una arquitectura rápida y mantenible:
+
+**Frontend**
+
+* Next.js + React
+* Tailwind
+* Chat interface
+
+**Backend**
+
+* FastAPI o Next.js API routes
+* LangChain o LlamaIndex
+* PostgreSQL + pgvector, o Supabase Vector
+* OpenAI / Claude / local LLM según presupuesto
+
+**RAG**
+
+* Document loader PDF/HTML
+* Chunking por secciones clínicas
+* Embeddings
+* Vector DB
+* Retrieval con filtros: enfermedad, edad, embarazo, urgencias, crónico, RIAS, GPC
+* Respuesta con citas obligatorias
+
+## Fuentes iniciales
+
+Empieza con estas categorías:
+
+1. **Hipertensión arterial**
+2. **Diabetes mellitus tipo 2**
+3. **Enfermedad respiratoria aguda / EPOC / asma**
+4. **Dolor torácico**
+5. **Cefalea**
+6. **Dolor abdominal**
+7. **Infección urinaria**
+8. **Embarazo y control prenatal**
+9. **Salud mental: depresión, ansiedad, riesgo suicida**
+10. **Dengue / enfermedades infecciosas prevalentes**
+11. **Niño febril**
+12. **Riesgo cardiovascular**
+13. **Antibióticos en consulta general**
+14. **Incapacidades, remisiones, órdenes y autorizaciones**
+
+## Módulos del producto
+
+### 1. Buscador clínico RAG
+
+Pregunta clínica libre:
+
+> “¿Cuándo remitir a urgencias un paciente hipertenso?”
+
+Respuesta estructurada:
+
+* Conducta
+* Red flags
+* Paraclínicos
+* Medicamentos posibles
+* Contraindicaciones
+* Seguimiento
+* Fuente
+
+### 2. Checklist de consulta
+
+Para cada motivo frecuente:
+
+* Qué preguntar
+* Qué examinar
+* Qué signos de alarma buscar
+* Qué registrar en historia clínica
+* Qué orden médica generar
+* Qué educación dar al paciente
+* Cuándo controlar
+
+### 3. Detector de errores
+
+Ejemplo:
+
+> “Voy a mandar nitrofurantoína a hombre de 70 años con fiebre y dolor lumbar.”
+
+El sistema debe advertir:
+
+* Posible pielonefritis/prostatitis.
+* No manejar como cistitis simple.
+* Considerar remisión, uroanálisis, urocultivo, función renal.
+* Error frecuente: subestimar infección urinaria complicada.
+
+### 4. Priorizador epidemiológico
+
+Crear un ranking interno:
+
+**Alta prioridad**
+
+* HTA
+* Diabetes
+* Infecciones respiratorias
+* Dolor osteomuscular
+* Infección urinaria
+* Cefalea
+* Dolor abdominal
+* Enfermedad diarreica
+* Dengue
+* Salud mental
+
+**Media prioridad**
+
+* EPOC/asma
+* Hipotiroidismo
+* Anemia
+* Enfermedad renal crónica
+* Dislipidemia
+* Obesidad
+
+**Alta criticidad aunque menor frecuencia**
+
+* Dolor torácico
+* ACV
+* Sepsis
+* Embarazo con signos de alarma
+* Riesgo suicida
+* Anafilaxia
+* Abdomen agudo
+
+## Estructura de carpetas
+
+```txt
+gp-colombia-rag/
+  app/
+    chat/
+    dashboard/
+    guidelines/
+    errors/
+  backend/
+    ingest/
+    rag/
+    prompts/
+    evaluators/
+  data/
+    raw_guidelines/
+    processed_chunks/
+    disease_taxonomy.json
+    admin_errors.json
+    clinical_errors.json
+  docs/
+    product_spec.md
+    medical_safety.md
+    rag_pipeline.md
+```
+
+## Prompt base del asistente
+
+```txt
+Eres un asistente de apoyo clínico para médicos generales en Colombia.
+Responde únicamente con base en las fuentes recuperadas.
+Si la información no está en las fuentes, dilo claramente.
+Prioriza seguridad del paciente, signos de alarma y necesidad de remisión.
+No reemplazas el juicio clínico del médico.
+Incluye:
+1. Resumen clínico
+2. Conducta sugerida
+3. Red flags
+4. Errores frecuentes
+5. Qué documentar
+6. Fuente usada
+7. Nivel de certeza
+```
+
+## Roadmap en 6 semanas
+
+### Semana 1 — Diseño
+
+* Definir enfermedades prioritarias.
+* Crear taxonomía de errores.
+* Descargar/organizar GPC y RIAS.
+* Crear `product_spec.md`.
+
+### Semana 2 — Ingesta RAG
+
+* Parser PDF/HTML.
+* Chunking por enfermedad/sección.
+* Embeddings.
+* Guardar en pgvector/Supabase.
+
+### Semana 3 — Chat clínico
+
+* Interfaz simple.
+* Retrieval.
+* Respuesta con citas.
+* Filtros por enfermedad.
+
+### Semana 4 — Checklists
+
+* Plantillas por motivo de consulta.
+* Red flags.
+* Errores administrativos.
+* Exportar respuesta a texto para historia clínica.
+
+### Semana 5 — Evaluación médica
+
+* Crear 50 casos clínicos frecuentes.
+* Probar respuestas.
+* Medir: exactitud, omisiones críticas, fuentes incorrectas.
+* Ajustar prompts y chunking.
+
+### Semana 6 — MVP usable
+
+* Login.
+* Historial de consultas.
+* Panel de guías.
+* Feedback del médico.
+* Versión local o web privada.
+
+## Primer prompt para Cursor
+
+```txt
+Create a Next.js + FastAPI medical RAG application for Colombian general practitioners.
+
+The app should:
+- Allow uploading Colombian clinical practice guidelines as PDFs.
+- Extract, chunk, embed and store them in a pgvector database.
+- Provide a chat interface where the physician asks clinical questions.
+- Retrieve relevant chunks and answer with citations.
+- Include safety sections: red flags, referral criteria, frequent clinical errors, administrative errors, and what to document in the medical record.
+- Never answer without citing retrieved guideline chunks.
+- Include disease priority metadata: hypertension, diabetes, respiratory infections, urinary tract infection, dengue, pregnancy, mental health, chest pain, headache, abdominal pain.
+
+Generate:
+1. Project structure
+2. Database schema
+3. Backend ingestion pipeline
+4. RAG query endpoint
+5. Frontend chat page
+6. Initial prompt templates
+7. Example seed JSON files for clinical_errors and administrative_errors
+```
+
+## Regla de oro
+
+No construyas “un ChatGPT médico”. Construye un **copiloto de consulta médica colombiana con fuentes verificables, red flags y prevención de errores**.
+
+[1]: https://www.sispro.gov.co/observatorios/oncalidadsalud/Paginas/Linea-Tematicas.aspx?utm_source=chatgpt.com "Repositorio Publicación de Guías de Práctica Clínica"
+[2]: https://www.minsalud.gov.co/salud/publica/ssr/paginas/rutas-integrales-de-atencion-en-salud-rias.aspx?utm_source=chatgpt.com "Rutas integrales de atención en salud - RIAS"

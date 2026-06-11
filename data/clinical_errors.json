@@ -1,0 +1,35 @@
+[
+  {
+    "id": "uti-complicated",
+    "title": "Tratar una infección urinaria complicada como cistitis simple",
+    "severity": "critical",
+    "patterns": ["nitrofurantoína", "hombre", "fiebre", "dolor lumbar", "pielonefritis"],
+    "warning": "Fiebre, dolor lumbar, sexo masculino, compromiso sistémico o sospecha de prostatitis cambian el escenario clínico. Revalore complejidad, función renal, cultivos y necesidad de remisión.",
+    "action": "No cierre el diagnóstico como cistitis no complicada sin documentar signos sistémicos y factores de riesgo."
+  },
+  {
+    "id": "hypertension-number-only",
+    "title": "Decidir urgencia hipertensiva solo por la cifra",
+    "severity": "critical",
+    "patterns": ["170/100", "180/120", "presión alta", "mareo", "cefalea"],
+    "warning": "La cifra debe interpretarse con síntomas, examen dirigido y búsqueda de daño agudo de órgano blanco. La GPC de HTA primaria 2017 no cubre urgencias hipertensivas.",
+    "action": "Documente repetición técnica de la TA, síntomas neurológicos/cardiopulmonares y hallazgos de órgano blanco."
+  },
+  {
+    "id": "suicide-no-plan",
+    "title": "No explorar plan, medios y red de apoyo ante ideación suicida",
+    "severity": "critical",
+    "patterns": ["suicidio", "morir", "no vale la pena", "hacerse daño", "autoagresión"],
+    "warning": "La evaluación debe explorar ideas, plan, método, acceso a medios, intentos y factores protectores.",
+    "action": "Mantenga acompañamiento y active atención inmediata cuando exista riesgo actual."
+  },
+  {
+    "id": "chest-pain-delay",
+    "title": "Demorar la ruta de urgencias en sospecha de síndrome coronario agudo",
+    "severity": "critical",
+    "patterns": ["dolor torácico", "dolor precordial", "opresión", "diaforesis", "angina"],
+    "warning": "El dolor compatible con SCA requiere clasificación urgente con electrocardiograma y biomarcadores en el entorno apropiado.",
+    "action": "No use esta herramienta como motivo para demorar activación de emergencias."
+  }
+]
+

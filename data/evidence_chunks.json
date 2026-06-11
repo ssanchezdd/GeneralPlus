@@ -1,0 +1,201 @@
+[
+  {
+    "id": "hta-scope-2017-p11",
+    "diseaseId": "hypertension",
+    "title": "Alcance de la GPC de hipertensión arterial primaria",
+    "institution": "Ministerio de Salud y Protección Social / IETS",
+    "year": 2017,
+    "page": 11,
+    "sourceUrl": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/CA/gpc-profesionales-hipertension-arterial-primaria.pdf",
+    "sourceType": "GPC",
+    "scope": "Prevención, diagnóstico, tratamiento y seguimiento de HTA primaria en adultos; excluye urgencia hipertensiva y HTA del embarazo.",
+    "summary": "La guía permite orientar el manejo longitudinal de HTA primaria, pero no debe usarse como fuente única para decidir una urgencia hipertensiva.",
+    "recommendations": [
+      "Repita y documente la medición con técnica adecuada antes de clasificar el control tensional.",
+      "Interprete la cifra junto con síntomas, examen y contexto clínico.",
+      "Si se sospecha una emergencia, use una ruta de urgencias y una fuente específica para daño agudo de órgano blanco."
+    ],
+    "redFlags": [
+      "Déficit neurológico focal, alteración del estado mental o convulsión.",
+      "Dolor torácico, disnea, edema pulmonar o signos de hipoperfusión.",
+      "Embarazo o puerperio con cefalea intensa, alteraciones visuales o dolor epigástrico."
+    ],
+    "documentation": [
+      "Técnica, posición, brazalete y repetición de la TA.",
+      "Síntomas neurológicos, visuales, cardiopulmonares y renales pertinentes.",
+      "Medicamentos actuales, adherencia, sustancias y comorbilidades."
+    ],
+    "commonErrors": [
+      "Aplicar esta GPC a urgencias hipertensivas, escenario expresamente fuera de su alcance.",
+      "Tratar una cifra aislada sin confirmar medición ni buscar daño agudo."
+    ],
+    "tags": ["hta", "presión alta", "tensión arterial", "170/100", "cefalea", "mareo", "urgencia"],
+    "confidence": "moderada"
+  },
+  {
+    "id": "sca-initial-2013-p10",
+    "diseaseId": "chest-pain",
+    "title": "Atención inicial del síndrome coronario agudo",
+    "institution": "Ministerio de Salud y Protección Social / Colciencias",
+    "year": 2013,
+    "page": 10,
+    "sourceUrl": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/INEC/IETS/GPC_Prof_Sal_SCA.pdf",
+    "sourceType": "GPC",
+    "scope": "Atención prehospitalaria, urgencias, hospitalización y prevención secundaria del síndrome coronario agudo en adultos.",
+    "summary": "Ante dolor precordial y angina típica, la guía ubica la evaluación en una ruta urgente y contempla ECG y biomarcadores para clasificar SCA.",
+    "recommendations": [
+      "Active evaluación urgente cuando la historia sea compatible con síndrome coronario agudo.",
+      "Obtenga electrocardiograma y biomarcadores dentro de la ruta institucional.",
+      "Mantenga reevaluación clínica; una valoración inicial negativa no descarta por sí sola el cuadro."
+    ],
+    "redFlags": [
+      "Dolor opresivo persistente, irradiación, diaforesis, síncope o disnea.",
+      "Inestabilidad hemodinámica o alteración del estado de conciencia.",
+      "Síntomas equivalentes en personas con diabetes, mayores o mujeres."
+    ],
+    "documentation": [
+      "Hora de inicio, características, irradiación, desencadenantes y síntomas asociados.",
+      "Signos vitales, perfusión, examen cardiopulmonar y ECG.",
+      "Hora de activación, remisión, tratamientos y respuesta."
+    ],
+    "commonErrors": [
+      "Retrasar la remisión por completar una historia extensa o consultar una herramienta.",
+      "Descartar SCA solo por presentación atípica o un estudio inicial negativo."
+    ],
+    "tags": ["dolor torácico", "dolor precordial", "angina", "infarto", "sca", "diaforesis", "electrocardiograma"],
+    "confidence": "alta"
+  },
+  {
+    "id": "depression-suicide-2013-p20",
+    "diseaseId": "mental-health",
+    "title": "Evaluación de riesgo suicida en depresión",
+    "institution": "Ministerio de Salud y Protección Social / Colciencias",
+    "year": 2013,
+    "page": 20,
+    "sourceUrl": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/INEC/IETS/GPC_Prof_Sal_Depre.pdf",
+    "sourceType": "GPC",
+    "scope": "Detección, diagnóstico y atención integral de adultos con episodio depresivo o trastorno depresivo recurrente.",
+    "summary": "La guía recomienda preguntar directamente por ideas, planes, método, acceso a medios, intentos y factores que previenen el daño.",
+    "recommendations": [
+      "Pregunte de manera directa y privada por ideación, plan, método, acceso a medios e intentos.",
+      "Explore consumo de sustancias, síntomas psicóticos, red de apoyo y estresores.",
+      "Riesgo suicida, intento reciente o síntomas psicóticos requieren consulta inmediata especializada."
+    ],
+    "redFlags": [
+      "Plan suicida estructurado o acceso inmediato a medios.",
+      "Intento reciente, autoagresión, intoxicación o agitación grave.",
+      "Psicosis, consumo que amenaza la vida o ausencia de red segura."
+    ],
+    "documentation": [
+      "Contenido textual relevante de ideación, plan, intención, medios y temporalidad.",
+      "Factores de riesgo, protectores, acompañante y red de apoyo.",
+      "Medidas de seguridad, destino, comunicación y seguimiento."
+    ],
+    "commonErrors": [
+      "Evitar preguntar por suicidio por temor a inducir la idea.",
+      "Dar salida sin acompañamiento, plan de seguridad ni trazabilidad de la remisión."
+    ],
+    "tags": ["depresión", "suicidio", "ideación suicida", "morir", "autoagresión", "salud mental"],
+    "confidence": "alta"
+  },
+  {
+    "id": "pregnancy-warning-2013-p35",
+    "diseaseId": "pregnancy",
+    "title": "Signos de alarma en el embarazo",
+    "institution": "Ministerio de Salud y Protección Social / Colciencias",
+    "year": 2013,
+    "page": 35,
+    "sourceUrl": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/INEC/IETS/G.Corta.Embarazo.y.parto.Prof.Salud.2013%20%281%29.pdf",
+    "sourceType": "GPC",
+    "scope": "Prevención, detección temprana y tratamiento de complicaciones del embarazo, parto y puerperio.",
+    "summary": "La guía recomienda advertir consulta por urgencias ante síntomas asociados a preeclampsia, eclampsia o HELLP.",
+    "recommendations": [
+      "Derive a valoración urgente ante signos de alarma obstétrica.",
+      "Considere edad gestacional, presión arterial, síntomas neurológicos/visuales, dolor epigástrico y sangrado.",
+      "No aplique metas o algoritmos de HTA primaria a hipertensión asociada al embarazo."
+    ],
+    "redFlags": [
+      "Cefalea severa, visión borrosa o fosfenos.",
+      "Dolor epigástrico, vómito persistente o presión arterial elevada.",
+      "Sangrado, salida de líquido, dolor intenso o disminución de movimientos fetales."
+    ],
+    "documentation": [
+      "Edad gestacional, antecedentes obstétricos y factores de riesgo.",
+      "TA repetida, síntomas, examen, bienestar fetal según capacidad.",
+      "Hora, destino, acompañamiento y condiciones de traslado."
+    ],
+    "commonErrors": [
+      "Normalizar cefalea o epigastralgia sin evaluar trastorno hipertensivo.",
+      "Usar una guía de HTA primaria que excluye el embarazo."
+    ],
+    "tags": ["embarazo", "gestante", "preeclampsia", "cefalea", "fosfenos", "epigastralgia", "sangrado"],
+    "confidence": "alta"
+  },
+  {
+    "id": "copd-exacerbation-2014-p54",
+    "diseaseId": "copd",
+    "title": "Riesgo en exacerbación de EPOC",
+    "institution": "Ministerio de Salud y Protección Social / Colciencias",
+    "year": 2014,
+    "page": 54,
+    "sourceUrl": "https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/INEC/IETS/GPC-EPOC-profesionales.pdf",
+    "sourceType": "GPC",
+    "scope": "Prevención, diagnóstico, tratamiento y seguimiento de EPOC en población adulta.",
+    "summary": "La guía propone identificar riesgo de muerte en exacerbaciones para remitir a servicios con estudios complementarios y posibilidad de hospitalización.",
+    "recommendations": [
+      "Determine gravedad, capacidad para hablar, uso de músculos accesorios, estado mental y oxigenación.",
+      "Identifique comorbilidades y exacerbaciones u hospitalizaciones previas.",
+      "Remita cuando exista riesgo de muerte o necesidad de recursos no disponibles."
+    ],
+    "redFlags": [
+      "Disnea que impide hablar, uso marcado de músculos accesorios o agotamiento.",
+      "Alteración del estado de conciencia, hipoxemia significativa o inestabilidad.",
+      "Acidemia, retención de CO2 sospechada o comorbilidad descompensada."
+    ],
+    "documentation": [
+      "Disnea basal y actual, esputo, fiebre y desencadenantes.",
+      "Frecuencia respiratoria, saturación, estado mental y trabajo respiratorio.",
+      "Oxígeno administrado, respuesta y criterios de remisión."
+    ],
+    "commonErrors": [
+      "Administrar oxígeno sin objetivo ni vigilancia en un paciente con riesgo de hipercapnia.",
+      "Omitir la comparación con estado basal y antecedentes de exacerbación."
+    ],
+    "tags": ["epoc", "exacerbación", "disnea", "oxígeno", "hipoxemia", "hipercapnia"],
+    "confidence": "moderada"
+  },
+  {
+    "id": "rias-care-pathways",
+    "diseaseId": "diabetes",
+    "title": "Estructura de las Rutas Integrales de Atención en Salud",
+    "institution": "Ministerio de Salud y Protección Social",
+    "year": 2026,
+    "page": null,
+    "sourceUrl": "https://www.minsalud.gov.co/salud/publica/ssr/paginas/rutas-integrales-de-atencion-en-salud-rias.aspx",
+    "sourceType": "RIAS",
+    "scope": "Promoción y mantenimiento, grupos de riesgo y atención específica para eventos priorizados.",
+    "summary": "Las RIAS articulan valoración integral, detección temprana, educación, identificación de riesgo, derivación oportuna, tratamiento y rehabilitación.",
+    "recommendations": [
+      "Integre la consulta individual con detección de riesgos y acciones preventivas.",
+      "Defina continuidad, derivación y seguimiento, no solo una conducta puntual.",
+      "Registre educación al paciente y coordinación con la ruta correspondiente."
+    ],
+    "redFlags": [
+      "Descompensación aguda que exige una ruta específica de evento.",
+      "Barreras de acceso que impiden una derivación oportuna.",
+      "Pérdida de seguimiento en una condición crónica de alto riesgo."
+    ],
+    "documentation": [
+      "Riesgos detectados y acciones de promoción o protección específica.",
+      "Ruta activada, destino, tiempos y responsable de continuidad.",
+      "Educación, acuerdos y seguimiento."
+    ],
+    "commonErrors": [
+      "Reducir la atención a una fórmula sin integrar prevención y seguimiento.",
+      "Ordenar una remisión sin cerrar el circuito de continuidad."
+    ],
+    "tags": ["rias", "ruta", "diabetes", "riesgo cardiovascular", "promoción", "mantenimiento", "seguimiento"],
+    "confidence": "alta"
+  }
+]
+

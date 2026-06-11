@@ -1,0 +1,27 @@
+[
+  {
+    "id": "missing-referral-reason",
+    "title": "Remisión sin pregunta clínica ni prioridad",
+    "severity": "high",
+    "check": "Registre motivo, hallazgos positivos y negativos relevantes, prioridad, destino y condiciones de traslado."
+  },
+  {
+    "id": "missing-safety-net",
+    "title": "Alta sin signos de alarma ni ventana de control",
+    "severity": "high",
+    "check": "Documente educación, signos de alarma, dónde consultar y fecha o condición de seguimiento."
+  },
+  {
+    "id": "incomplete-prescription",
+    "title": "Fórmula incompleta",
+    "severity": "medium",
+    "check": "Incluya nombre genérico, concentración, forma, dosis, vía, frecuencia, duración, cantidad y advertencias."
+  },
+  {
+    "id": "unsupported-disability",
+    "title": "Incapacidad sin correlación funcional",
+    "severity": "medium",
+    "check": "Describa diagnóstico, limitación funcional, actividad laboral relevante, duración y plan de reevaluación."
+  }
+]
+

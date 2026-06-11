@@ -1,0 +1,67 @@
+[
+  {
+    "id": "hypertension",
+    "name": "Hipertensión arterial",
+    "priority": "alta",
+    "criticality": "alta",
+    "aliases": ["hta", "presión alta", "tensión alta"],
+    "color": "amber"
+  },
+  {
+    "id": "diabetes",
+    "name": "Diabetes mellitus tipo 2",
+    "priority": "alta",
+    "criticality": "media",
+    "aliases": ["diabetes", "dm2", "hiperglucemia"],
+    "color": "blue"
+  },
+  {
+    "id": "chest-pain",
+    "name": "Dolor torácico / SCA",
+    "priority": "critica",
+    "criticality": "muy alta",
+    "aliases": ["dolor torácico", "dolor precordial", "angina", "sca", "infarto"],
+    "color": "red"
+  },
+  {
+    "id": "pregnancy",
+    "name": "Embarazo y control prenatal",
+    "priority": "alta",
+    "criticality": "muy alta",
+    "aliases": ["gestante", "embarazo", "preeclampsia", "prenatal"],
+    "color": "violet"
+  },
+  {
+    "id": "mental-health",
+    "name": "Depresión y riesgo suicida",
+    "priority": "alta",
+    "criticality": "muy alta",
+    "aliases": ["depresión", "suicidio", "ideación suicida", "salud mental"],
+    "color": "purple"
+  },
+  {
+    "id": "copd",
+    "name": "EPOC",
+    "priority": "media",
+    "criticality": "alta",
+    "aliases": ["epoc", "disnea", "exacerbación", "hipoxemia"],
+    "color": "cyan"
+  },
+  {
+    "id": "uti",
+    "name": "Infección urinaria",
+    "priority": "alta",
+    "criticality": "alta",
+    "aliases": ["itu", "cistitis", "pielonefritis", "disuria"],
+    "color": "green"
+  },
+  {
+    "id": "headache",
+    "name": "Cefalea",
+    "priority": "alta",
+    "criticality": "alta",
+    "aliases": ["cefalea", "dolor de cabeza", "migraña"],
+    "color": "orange"
+  }
+]
+
